@@ -1,16 +1,45 @@
-# score_board_tv
+# 📺 Flutter APK Installation Guide for Cristor Smart TVs
 
-A flutter timer and score board app for TV,
+This guide provides step-by-step instructions for installing your Flutter application on **Cristor Smart TVs** via USB drive.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📋 Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+Before starting, ensure you have:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- A **USB flash drive** (at least 1GB capacity)
+- Your **Flutter APK** file: `app-armeabi-v7a-release.apk`
+- A **Cristor Smart TV** running Android TV OS
+- A remote control for the TV
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🛠️ Step-by-Step Instructions
+
+### Step 1: Format USB Drive to FAT32
+
+> **⚠️ IMPORTANT:** The USB drive **MUST** be formatted to FAT32 for the TV to recognize it properly.
+
+#### On Windows:
+
+1. Insert the USB drive into your computer
+2. Open **File Explorer** → Right-click the USB drive
+3. Select **Format...**
+4. Choose **FAT32** from the "File system" dropdown
+5. Click **Start** → **OK** to confirm
+
+#### On Linux (Manjaro/Ubuntu):
+
+```bash
+# Find your USB device name (e.g., /dev/sdb1)
+lsblk
+
+# Unmount the drive
+sudo umount /dev/sdX1
+
+# Format to FAT32
+sudo mkfs.vfat -F 32 /dev/sdX1
+
+# Or use the GUI tool: GParted or KDE Partition Manager
+```
